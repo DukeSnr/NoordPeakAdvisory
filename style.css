@@ -391,3 +391,114 @@ footer {
     overflow: hidden; clip: rect(0,0,0,0);
     white-space: nowrap; border: 0;
 }
+
+/* Responsive tweaks for phones / small tablets */
+@media (max-width: 768px) {
+    .container {
+        padding: 18px;
+    }
+
+    /* Stack nav and center items */
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .nav-links {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        padding: 8px 10px;
+        font-size: 0.95rem;
+    }
+    .logo {
+        order: -1;
+        font-size: 1.25rem;
+        margin-bottom: 4px;
+    }
+    .cta-btn {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .cta-btn a { display: block; width: 100%; height: 100%; color: inherit; text-decoration: none; }
+
+    /* Main content stacks vertically */
+    .main-content {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .left h1 {
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 1.15;
+    }
+    .left p {
+        font-size: 0.98rem;
+        text-align: center;
+    }
+
+    /* Right column becomes full width */
+    .right,
+    .stats-card {
+        width: 100%;
+        position: relative;
+    }
+
+    /* Stats and bottom blocks stack */
+    .bottom-stats {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .stat-block { padding: 16px; }
+
+    /* Services -> single column tiles */
+    .service-list {
+        flex-direction: column;
+    }
+    .service-item {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    /* Team members stacked and centered */
+    .team-members {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .member img {
+        max-width: 140px;
+        height: auto;
+        align-self: center;
+        margin-bottom: 8px;
+    }
+
+    /* Footer layout */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        text-align: center;
+    }
+    .footer-section .social-links {
+        justify-content: center;
+    }
+    .social-link {
+        width: 64px;
+        height: 64px;
+    }
+    .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Make all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
